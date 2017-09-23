@@ -50,7 +50,7 @@ StyleSheetList.prototype.toggle_autoreload = function toggle_autoreload(){
 };
 
 StyleSheetList.prototype.reload_on_focus = function reload_on_focus(){
-  // usage: document.styleSheets.toggle_autoreload()
+  // usage: document.styleSheets.reload_on_focus()
   var that = this;
   window.onfocus = function () {
     that.reload();
