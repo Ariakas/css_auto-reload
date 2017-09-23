@@ -48,3 +48,11 @@ StyleSheetList.prototype.toggle_autoreload = function toggle_autoreload(){
   // usage: document.styleSheets.toggle_autoreload()
   return this.start_autoreload.running ? this.stop_autoreload() : this.start_autoreload();
 };
+
+StyleSheetList.prototype.reload_on_focus = function reload_on_focus(){
+  // usage: document.styleSheets.toggle_autoreload()
+  var that = this;
+  window.onfocus = function () {
+    that.reload();
+  };
+};
